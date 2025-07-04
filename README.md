@@ -1,6 +1,6 @@
 <b>Prerequisites</b>
 
-- FFmpeg must be installed and added to your system PATH.
+- FFmpeg must be installed.
 
 - Create the following folders in the project root:
 
