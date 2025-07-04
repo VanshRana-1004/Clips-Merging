@@ -22,7 +22,7 @@ async function concatWebmWithReencode(clipsDir: string, outputName: string) {
   // step 1 : to extract original webm files from initial-clips folder (can be audio only, video only or both video + audio) 
   const files = await fs.readdir(clipsDir);
   const webmFiles = files
-    .filter(f => (f.startsWith('a1') || f.startsWith('va1') || f.startsWith('s1') || f.startsWith('b')) && f.endsWith('.webm'))
+    .filter(f => f.endsWith('.webm'))
     .map(f => path.join(clipsDir, f));
 
   if (webmFiles.length === 0) throw new Error("No .webm files found");
